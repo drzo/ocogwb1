@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, GitBranch, Download } from "lucide-react";
+import { ExternalLink, GitBranch, Download, HelpCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -17,6 +18,12 @@ export function Header() {
         <Button variant="outline" size="sm">
           <Download className="h-4 w-4 mr-2" />
           Export
+        </Button>
+        <Button variant="outline" size="sm" asChild>
+          <Link to="/help">
+            <HelpCircle className="h-4 w-4 mr-2" />
+            Help
+          </Link>
         </Button>
       </div>
     </header>
